@@ -85,6 +85,71 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Pricing Section */}
+        <section className="mx-4 md:mx-0 mt-6 mb-0 px-6 md:px-20 py-14">
+          <span className="text-accent font-mono text-xs tracking-widest uppercase mb-3 block">Тарифы</span>
+          <h2 className="text-foreground font-bold text-2xl md:text-3xl mb-10 leading-tight" style={{ fontFamily: "var(--font-montserrat)" }}>
+            Работай, когда тебе удобно
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Дневной */}
+            <div className="bg-card border border-border rounded-3xl p-6 flex flex-col gap-3 hover:scale-[1.02] transition-transform duration-200">
+              <div className="text-2xl">☀️</div>
+              <div>
+                <p className="text-muted-foreground font-mono text-xs uppercase tracking-widest mb-1">Дневной</p>
+                <p className="text-foreground font-mono text-xs">06:00 — 14:00</p>
+              </div>
+              <div className="mt-auto pt-4 border-t border-border">
+                <span className="text-foreground font-bold text-3xl" style={{ fontFamily: "var(--font-montserrat)" }}>1 200</span>
+                <span className="text-muted-foreground font-mono text-sm ml-1">₽/смена</span>
+              </div>
+            </div>
+
+            {/* Вечерний */}
+            <div className="bg-card border border-border rounded-3xl p-6 flex flex-col gap-3 hover:scale-[1.02] transition-transform duration-200">
+              <div className="text-2xl">🌆</div>
+              <div>
+                <p className="text-muted-foreground font-mono text-xs uppercase tracking-widest mb-1">Вечерний</p>
+                <p className="text-foreground font-mono text-xs">14:00 — 22:00</p>
+              </div>
+              <div className="mt-auto pt-4 border-t border-border">
+                <span className="text-foreground font-bold text-3xl" style={{ fontFamily: "var(--font-montserrat)" }}>1 400</span>
+                <span className="text-muted-foreground font-mono text-sm ml-1">₽/смена</span>
+              </div>
+            </div>
+
+            {/* Ночной */}
+            <div className="bg-card border border-border rounded-3xl p-6 flex flex-col gap-3 hover:scale-[1.02] transition-transform duration-200">
+              <div className="text-2xl">🌙</div>
+              <div>
+                <p className="text-muted-foreground font-mono text-xs uppercase tracking-widest mb-1">Ночной</p>
+                <p className="text-foreground font-mono text-xs">22:00 — 06:00</p>
+              </div>
+              <div className="mt-auto pt-4 border-t border-border">
+                <span className="text-foreground font-bold text-3xl" style={{ fontFamily: "var(--font-montserrat)" }}>1 100</span>
+                <span className="text-muted-foreground font-mono text-sm ml-1">₽/смена</span>
+              </div>
+            </div>
+
+            {/* Абонемент / Безлимит */}
+            <div className="bg-primary rounded-3xl p-6 flex flex-col gap-3 hover:scale-[1.02] transition-transform duration-200 relative overflow-hidden">
+              <div className="absolute top-3 right-4 bg-primary-foreground/20 text-primary-foreground font-mono text-[10px] px-2 py-0.5 rounded-full tracking-widest uppercase">Выгоднее всего</div>
+              <div className="text-2xl">⚡</div>
+              <div>
+                <p className="text-primary-foreground/70 font-mono text-xs uppercase tracking-widest mb-1">Безлимит</p>
+                <p className="text-primary-foreground font-mono text-xs">Весь год · любое время</p>
+                <p className="text-primary-foreground/60 font-mono text-xs mt-1">Абонемент — от 3 дней</p>
+              </div>
+              <div className="mt-auto pt-4 border-t border-primary-foreground/20">
+                <span className="text-primary-foreground font-bold text-3xl" style={{ fontFamily: "var(--font-montserrat)" }}>43 000</span>
+                <span className="text-primary-foreground/70 font-mono text-sm ml-1">₽/год</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
       <Footer />
     </div>
