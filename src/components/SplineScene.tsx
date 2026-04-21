@@ -1,127 +1,81 @@
 export default function SplineScene() {
   return (
-    <div
-      className="absolute inset-0 w-full h-full flex items-center justify-end pr-8 md:pr-24"
-      style={{ background: "transparent" }}
-    >
-      <div className="relative w-72 h-72 md:w-96 md:h-96 select-none">
-        <svg
-          viewBox="0 0 400 400"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full drop-shadow-2xl"
-          style={{ filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.15))" }}
-        >
-          {/* Branch */}
-          <rect x="30" y="155" width="340" height="22" rx="11" fill="#8B6914" />
-          <rect x="30" y="155" width="340" height="10" rx="5" fill="#A07820" />
+    <div className="absolute inset-0 w-full h-full flex items-center justify-end pr-4 md:pr-16">
+      <style>{`
+        @keyframes sloth-float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        .sloth-float { animation: sloth-float 4s ease-in-out infinite; }
+      `}</style>
 
-          {/* Body */}
-          <ellipse cx="200" cy="230" rx="68" ry="75" fill="#C8B89A" />
-          <ellipse cx="200" cy="225" rx="60" ry="68" fill="#D4C4A8" />
+      <div className="sloth-float w-64 h-72 md:w-[420px] md:h-[460px] select-none">
+        <svg viewBox="0 0 420 460" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
 
-          {/* Belly */}
-          <ellipse cx="200" cy="240" rx="38" ry="45" fill="#E8DCCC" />
+          {/* === DECORATIVE ARCS === */}
+          <path d="M145 380 Q55 220 145 70" stroke="#8DBFBF" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+          <path d="M275 380 Q365 220 275 70" stroke="#8DBFBF" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
 
-          {/* Left arm (hanging) */}
-          <path
-            d="M148 175 C130 170 115 175 108 185 C100 195 105 210 115 215 C125 220 138 210 145 200 C150 190 148 180 148 175Z"
-            fill="#C8B89A"
-          />
-          {/* Left claw */}
-          <path d="M105 218 C100 225 97 230 103 232" stroke="#8B6914" strokeWidth="3" strokeLinecap="round" />
-          <path d="M110 222 C107 230 106 236 112 237" stroke="#8B6914" strokeWidth="3" strokeLinecap="round" />
-          <path d="M116 224 C115 232 115 238 121 238" stroke="#8B6914" strokeWidth="3" strokeLinecap="round" />
+          {/* Leaves LEFT */}
+          <ellipse cx="80" cy="300" rx="9" ry="17" fill="#8DBFBF" transform="rotate(-25 80 300)"/>
+          <ellipse cx="62" cy="250" rx="9" ry="17" fill="#8DBFBF" transform="rotate(-45 62 250)"/>
+          <ellipse cx="60" cy="195" rx="9" ry="17" fill="#8DBFBF" transform="rotate(-65 60 195)"/>
+          <ellipse cx="78" cy="140" rx="9" ry="17" fill="#8DBFBF" transform="rotate(-85 78 140)"/>
+          <ellipse cx="112" cy="95" rx="9" ry="17" fill="#8DBFBF" transform="rotate(-105 112 95)"/>
+          <ellipse cx="155" cy="62" rx="9" ry="17" fill="#8DBFBF" transform="rotate(-120 155 62)"/>
 
-          {/* Right arm (hanging) */}
-          <path
-            d="M252 175 C270 170 285 175 292 185 C300 195 295 210 285 215 C275 220 262 210 255 200 C250 190 252 180 252 175Z"
-            fill="#C8B89A"
-          />
-          {/* Right claw */}
-          <path d="M295 218 C300 225 303 230 297 232" stroke="#8B6914" strokeWidth="3" strokeLinecap="round" />
-          <path d="M290 222 C293 230 294 236 288 237" stroke="#8B6914" strokeWidth="3" strokeLinecap="round" />
-          <path d="M284 224 C285 232 285 238 279 238" stroke="#8B6914" strokeWidth="3" strokeLinecap="round" />
+          {/* Leaves RIGHT */}
+          <ellipse cx="340" cy="300" rx="9" ry="17" fill="#8DBFBF" transform="rotate(25 340 300)"/>
+          <ellipse cx="358" cy="250" rx="9" ry="17" fill="#8DBFBF" transform="rotate(45 358 250)"/>
+          <ellipse cx="360" cy="195" rx="9" ry="17" fill="#8DBFBF" transform="rotate(65 360 195)"/>
+          <ellipse cx="342" cy="140" rx="9" ry="17" fill="#8DBFBF" transform="rotate(85 342 140)"/>
+          <ellipse cx="308" cy="95" rx="9" ry="17" fill="#8DBFBF" transform="rotate(105 308 95)"/>
+          <ellipse cx="265" cy="62" rx="9" ry="17" fill="#8DBFBF" transform="rotate(120 265 62)"/>
 
-          {/* Left leg */}
-          <ellipse cx="173" cy="298" rx="22" ry="30" fill="#C8B89A" transform="rotate(-10 173 298)" />
-          <ellipse cx="168" cy="324" rx="18" ry="12" fill="#B8A88A" />
-          {/* Left foot claws */}
-          <path d="M158 330 C154 337 152 342 158 343" stroke="#8B6914" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M167 333 C165 340 164 345 170 345" stroke="#8B6914" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M176 330 C177 337 178 342 172 343" stroke="#8B6914" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Heart top center */}
+          <path d="M210 28 C210 28 204 19 197 22 C190 25 190 34 197 40 L210 53 L223 40 C230 34 230 25 223 22 C216 19 210 28 210 28Z" fill="#8DBFBF"/>
 
-          {/* Right leg */}
-          <ellipse cx="227" cy="298" rx="22" ry="30" fill="#C8B89A" transform="rotate(10 227 298)" />
-          <ellipse cx="232" cy="324" rx="18" ry="12" fill="#B8A88A" />
-          {/* Right foot claws */}
-          <path d="M222 330 C218 337 216 342 222 343" stroke="#8B6914" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M231 333 C229 340 228 345 234 345" stroke="#8B6914" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M240 330 C241 337 242 342 236 343" stroke="#8B6914" strokeWidth="2.5" strokeLinecap="round" />
+          {/* === DESK === */}
+          <rect x="75" y="382" width="270" height="15" rx="7.5" fill="#3D1A0A"/>
 
-          {/* Head */}
-          <ellipse cx="200" cy="158" rx="52" ry="48" fill="#D4C4A8" />
-          <ellipse cx="200" cy="158" rx="44" ry="40" fill="#E0D0B8" />
+          {/* === LAPTOP === */}
+          {/* Laptop base/body */}
+          <rect x="108" y="305" width="204" height="80" rx="10" fill="#F2C0B8"/>
+          <rect x="113" y="310" width="194" height="70" rx="7" fill="#F7CFCA"/>
+          {/* Laptop bottom edge */}
+          <rect x="104" y="378" width="212" height="10" rx="5" fill="#E8AFA6"/>
 
-          {/* Face mask */}
-          <ellipse cx="200" cy="165" rx="30" ry="25" fill="#C8B898" />
+          {/* === SLOTH BODY === */}
+          <ellipse cx="210" cy="270" rx="98" ry="115" fill="#3D1A0A"/>
+          {/* Chest/belly lighter area */}
+          <ellipse cx="210" cy="278" rx="62" ry="78" fill="#F5EDE0"/>
 
-          {/* Eyes (sleepy) */}
-          <ellipse cx="185" cy="152" rx="10" ry="10" fill="white" />
-          <ellipse cx="215" cy="152" rx="10" ry="10" fill="white" />
-          {/* Sleepy eyelids */}
-          <path d="M175 152 Q185 146 195 152" fill="#C8B898" />
-          <path d="M205 152 Q215 146 225 152" fill="#C8B898" />
-          {/* Pupils */}
-          <ellipse cx="185" cy="155" rx="5" ry="4" fill="#5C4030" />
-          <ellipse cx="215" cy="155" rx="5" ry="4" fill="#5C4030" />
-          {/* Eye shine */}
-          <circle cx="187" cy="153" r="1.5" fill="white" />
-          <circle cx="217" cy="153" r="1.5" fill="white" />
+          {/* === HEAD === */}
+          <ellipse cx="210" cy="158" rx="85" ry="88" fill="#3D1A0A"/>
 
-          {/* Nose */}
-          <ellipse cx="200" cy="165" rx="6" ry="4" fill="#A09080" />
+          {/* Face cream */}
+          <ellipse cx="210" cy="170" rx="60" ry="62" fill="#F5EDE0"/>
+
+          {/* Dark eye patches */}
+          <ellipse cx="184" cy="157" rx="24" ry="22" fill="#3D1A0A"/>
+          <ellipse cx="236" cy="157" rx="24" ry="22" fill="#3D1A0A"/>
+
+          {/* Squinting eyes — curved lines */}
+          <path d="M164 159 Q184 144 204 159" stroke="#F5EDE0" strokeWidth="4.5" strokeLinecap="round" fill="none"/>
+          <path d="M216 159 Q236 144 256 159" stroke="#F5EDE0" strokeWidth="4.5" strokeLinecap="round" fill="none"/>
+
+          {/* Nose (heart shape, small) */}
+          <path d="M210 182 C210 182 205 175 199 178 C193 181 193 188 199 193 L210 202 L221 193 C227 188 227 181 221 178 C215 175 210 182 210 182Z" fill="#3D1A0A"/>
 
           {/* Smile */}
-          <path d="M190 175 Q200 182 210 175" stroke="#A09080" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+          <path d="M192 205 Q210 218 228 205" stroke="#3D1A0A" strokeWidth="3.5" strokeLinecap="round" fill="none"/>
 
-          {/* Ears */}
-          <ellipse cx="155" cy="128" rx="18" ry="16" fill="#C8B89A" />
-          <ellipse cx="155" cy="128" rx="11" ry="10" fill="#E8D4C0" />
-          <ellipse cx="245" cy="128" rx="18" ry="16" fill="#C8B89A" />
-          <ellipse cx="245" cy="128" rx="11" ry="10" fill="#E8D4C0" />
+          {/* Top head fur tufts */}
+          <ellipse cx="210" cy="74" rx="13" ry="20" fill="#3D1A0A"/>
+          <ellipse cx="194" cy="80" rx="9" ry="16" fill="#3D1A0A"/>
+          <ellipse cx="226" cy="80" rx="9" ry="16" fill="#3D1A0A"/>
 
-          {/* Fur texture lines */}
-          <path d="M200 110 Q197 100 200 92" stroke="#C4B095" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-          <path d="M210 112 Q210 102 214 95" stroke="#C4B095" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-          <path d="M190 112 Q188 102 186 95" stroke="#C4B095" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-
-          {/* ZZZ sleep bubbles */}
-          <text x="240" y="120" fontSize="18" fill="#9B8BCD" fontWeight="bold" opacity="0.8"
-            style={{ animation: "zzz 2s ease-in-out infinite" }}>Z</text>
-          <text x="258" y="100" fontSize="14" fill="#9B8BCD" fontWeight="bold" opacity="0.6"
-            style={{ animationDelay: "0.5s" }}>Z</text>
-          <text x="272" y="84" fontSize="10" fill="#9B8BCD" fontWeight="bold" opacity="0.4"
-            style={{ animationDelay: "1s" }}>Z</text>
         </svg>
-
-        {/* Floating animation wrapper */}
-        <style>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-          }
-          @keyframes zzz {
-            0%, 100% { opacity: 0.8; transform: translateY(0) scale(1); }
-            50% { opacity: 0.3; transform: translateY(-8px) scale(0.9); }
-          }
-          .sloth-float {
-            animation: float 4s ease-in-out infinite;
-          }
-          .zzz-1 { animation: zzz 2s ease-in-out infinite; }
-          .zzz-2 { animation: zzz 2s ease-in-out infinite 0.5s; }
-          .zzz-3 { animation: zzz 2s ease-in-out infinite 1s; }
-        `}</style>
       </div>
     </div>
   )
