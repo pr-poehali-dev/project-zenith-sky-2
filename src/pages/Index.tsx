@@ -4,7 +4,6 @@ import RotatingTextAccent from "@/components/RotatingTextAccent"
 import Footer from "@/components/Footer"
 import HeroTextOverlay from "@/components/HeroTextOverlay"
 
-const CDN_BASE = "https://cdn.poehali.dev/templates/meet-jack"
 
 const Index = () => {
   return (
@@ -40,36 +39,49 @@ const Index = () => {
             +
           </div>
 
-          <div className="px-6 md:px-40">
-            <div className="flex items-center justify-center mb-3.5 md:gap-11">
-              <div className="flex flex-col items-center">
-                <img src={`${CDN_BASE}/jack-front.png`} alt="Макс спереди" className="w-48 h-48 md:w-56 md:h-56 object-contain" />
+          <div className="px-6 md:px-20">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start justify-center mb-10 mt-6">
+              <div className="flex flex-col gap-2 flex-1">
+                <span className="text-accent font-mono text-xs tracking-widest uppercase mb-1">Атмосфера</span>
+                <h2 className="text-foreground font-bold text-2xl md:text-3xl leading-tight" style={{ fontFamily: "var(--font-montserrat)" }}>
+                  Место, где хочется возвращаться
+                </h2>
+                <p className="text-muted-foreground font-mono text-sm mt-2 leading-relaxed">
+                  Никаких строгих дресс-кодов и формальностей. Chill Work — это пространство, где молодёжь работает в комфорте: уютные зоны, музыка, кофе и люди на одной волне.
+                </p>
               </div>
 
-              <div className="flex flex-col items-center">
-                <img src={`${CDN_BASE}/jack-side.png`} alt="Макс сбоку" className="w-48 h-48 md:w-56 md:h-56 object-contain" />
-              </div>
-
-              <div className="flex flex-col items-center">
-                <img src={`${CDN_BASE}/jack-back.png`} alt="Макс сзади" className="w-48 h-48 md:w-56 md:h-56 object-contain" />
+              <div className="flex flex-col gap-4 flex-1">
+                <div className="flex items-start gap-4">
+                  <span className="text-accent font-mono text-sm min-w-fit">// 01</span>
+                  <div>
+                    <span className="text-foreground font-mono text-sm font-semibold">Рабочие зоны</span>
+                    <p className="text-muted-foreground font-mono text-xs mt-1">Столы, розетки, быстрый Wi-Fi — всё чтобы фокусироваться на задачах</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-accent font-mono text-sm min-w-fit">// 02</span>
+                  <div>
+                    <span className="text-foreground font-mono text-sm font-semibold">Зоны отдыха</span>
+                    <p className="text-muted-foreground font-mono text-xs mt-1">Мягкие диваны, настолки, уголки для перезарядки между спринтами</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-accent font-mono text-sm min-w-fit">// 03</span>
+                  <div>
+                    <span className="text-foreground font-mono text-sm font-semibold">Сообщество</span>
+                    <p className="text-muted-foreground font-mono text-xs mt-1">Нетворкинг, коллаборации и ивенты с теми, кто думает как ты</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 max-w-5xl">
-              <div className="flex items-center gap-4">
-                <span className="text-accent font-mono text-sm">Имя</span>
-                <span className="text-foreground font-mono text-sm">Макс</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-accent font-mono text-sm">Вид</span>
-                <span className="text-foreground font-mono text-sm">Инопланетянин с планеты Флэпджек</span>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-accent font-mono text-sm">Характер</span>
-                <span className="text-foreground font-mono text-sm">
-                  Любопытный, гибкий, немного расслабленный - но острый, когда дело касается баз данных и организации информации.
+            <div className="flex flex-wrap gap-3 mt-2">
+              {["Свободная атмосфера", "Гибкий график", "Быстрый Wi-Fi", "Кофе и снеки", "Ивенты", "Нетворкинг"].map((tag) => (
+                <span key={tag} className="bg-secondary text-foreground font-mono text-xs px-4 py-2 rounded-full border border-border">
+                  {tag}
                 </span>
-              </div>
+              ))}
             </div>
           </div>
         </section>

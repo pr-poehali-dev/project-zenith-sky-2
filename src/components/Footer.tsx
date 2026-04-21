@@ -1,4 +1,4 @@
-const CDN_BASE = "https://cdn.poehali.dev/templates/meet-jack"
+import Icon from "@/components/ui/icon"
 
 export default function Footer() {
   return (
@@ -16,73 +16,59 @@ export default function Footer() {
               className="text-foreground text-4xl md:text-5xl mb-8 leading-[3.5rem] md:leading-[4rem] font-semibold text-center md:text-left mt-0"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
-              Все связано воедино.
+              Работай. Отдыхай. Повторяй.
             </h2>
 
             <div className="space-y-4 text-foreground">
               <div className="flex items-start gap-3">
                 <span className="text-accent mt-1">*</span>
-                <p className="text-sm">Макс верит, что вселенная - и каждая база данных - построена на связях.</p>
+                <p className="text-sm font-mono">Chill Work — место, где продуктивность и расслабленность живут рядом.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent mt-1">*</span>
-                <p className="text-sm">Его миссия - помогать людям проектировать с ясностью и воображением.</p>
+                <p className="text-sm font-mono">Мы создали пространство, в котором молодёжь может делать крутые вещи в своём темпе.</p>
               </div>
             </div>
           </div>
 
-          <div className="hidden md:flex flex-1 justify-end items-center relative">
-            <div className="relative">
-              <img
-                src={`${CDN_BASE}/jack-footer-ufo-new.png`}
-                alt="Макс в НЛО"
-                width={400}
-                height={300}
-                className="object-contain mb-0 mt-4"
-              />
+          <div className="flex flex-1 justify-center md:justify-end items-center mt-10 md:mt-0">
+            <div className="grid grid-cols-2 gap-4 text-center">
+              <div className="bg-secondary border border-border rounded-2xl p-6">
+                <p className="text-accent text-3xl font-bold" style={{ fontFamily: "var(--font-montserrat)" }}>24/7</p>
+                <p className="text-muted-foreground font-mono text-xs mt-1">Доступ</p>
+              </div>
+              <div className="bg-secondary border border-border rounded-2xl p-6">
+                <p className="text-accent text-3xl font-bold" style={{ fontFamily: "var(--font-montserrat)" }}>∞</p>
+                <p className="text-muted-foreground font-mono text-xs mt-1">Вдохновение</p>
+              </div>
+              <div className="bg-secondary border border-border rounded-2xl p-6">
+                <p className="text-accent text-3xl font-bold" style={{ fontFamily: "var(--font-montserrat)" }}>5+</p>
+                <p className="text-muted-foreground font-mono text-xs mt-1">Зон отдыха</p>
+              </div>
+              <div className="bg-secondary border border-border rounded-2xl p-6">
+                <p className="text-accent text-3xl font-bold" style={{ fontFamily: "var(--font-montserrat)" }}>0</p>
+                <p className="text-muted-foreground font-mono text-xs mt-1">Дресс-кодов</p>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="md:hidden flex justify-center mt-12">
-          <div className="relative">
-            <img
-              src={`${CDN_BASE}/jack-footer-ufo-new.png`}
-              alt="Макс в НЛО"
-              width={500}
-              height={375}
-              className="object-contain"
-            />
           </div>
         </div>
 
         <div id="contact" className="w-full px-6 py-16 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-0 border-t border-border mt-16">
-          <div className="flex flex-col md:flex-row gap-2 text-center md:text-left">
-            <h2 className="text-foreground font-mono text-xl font-bold">Познакомься с Максом!</h2>
-            <p className="text-foreground font-mono font-normal text-base">Твой дружелюбный гид в мире баз данных</p>
+          <div className="flex flex-col gap-1 text-center md:text-left">
+            <h2 className="text-foreground font-mono text-xl font-bold">Готов попробовать Chill Work?</h2>
+            <p className="text-muted-foreground font-mono font-normal text-sm">Забронируй место и приходи работать в своё удовольствие</p>
           </div>
 
-          <a href="mailto:hello@example.com">
+          <a href="mailto:hello@chillwork.ru">
             <button className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg whitespace-nowrap hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 font-mono flex items-center gap-2">
-              Связаться с Максом
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M7 7h10v10M7 17L17 7" />
-              </svg>
+              Забронировать место
+              <Icon name="ArrowUpRight" size={20} />
             </button>
           </a>
         </div>
 
         <div className="w-full px-6 py-4 border-t border-border flex md:flex-row items-center justify-between gap-2 flex-row">
-          <p className="text-muted-foreground text-sm font-mono">2025 Макс</p>
+          <p className="text-muted-foreground text-sm font-mono">2025 Chill Work</p>
           <p className="text-muted-foreground text-sm font-mono">poehali.dev</p>
         </div>
       </div>
